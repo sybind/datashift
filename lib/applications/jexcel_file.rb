@@ -25,7 +25,7 @@ if(DataShift::Guards::jruby?)
         
     include Enumerable
     
-    include_class 'org.apache.poi.hssf.util.HSSFColor'
+    java_import 'org.apache.poi.hssf.util.HSSFColor'
     java_import 'org.apache.poi.poifs.filesystem.POIFSFileSystem'
 
     java_import 'org.apache.poi.hssf.usermodel.HSSFCell'
