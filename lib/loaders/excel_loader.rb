@@ -89,7 +89,9 @@ module DataShift
             #
             # This is rubbish but currently manually detect when actual data ends, this isn't very smart but
             # got no better idea than ending once we hit the first completely empty row
-            break if(@current_row.nil? || @current_row.compact.empty?)
+
+            #break if(@current_row.nil? || @current_row.compact.empty?)
+            break if(@current_row.nil?)
 
             logger.info "Processing Row #{current_row_idx} : #{@current_row}"
 
