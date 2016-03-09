@@ -100,7 +100,7 @@ module DataShift
         if( value.is_a? ActiveRecord::Relation ) # Rails 4 - query no longer returns an array
           @current_value = value.to_a
         elsif( value.class.ancestors.include?(Spreadsheet::Formula))
-          value.value
+          @current_value = value.value
         elsif( value.class.ancestors.include?(ActiveRecord::Base) || value.is_a?(Array))
           @current_value = value
         else
