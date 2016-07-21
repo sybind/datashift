@@ -47,8 +47,8 @@ module DataShift
     
     private
     
-    def open( log = 'datashift.log')
-      return ActiveRecord::Base.logger if(defined?(ActiveRecord) && ActiveRecord::Base.logger)
+    def open( log = 'datashift.log')      
+      # return ActiveRecord::Base.logger if(defined?(ActiveRecord) && ActiveRecord::Base.logger)      
       FileUtils::mkdir(logdir) unless File.directory?(logdir)
       log_file = File.open( File.join(logdir(), 'datashift.log'), "a")
       MultiIO.new(log_file)
